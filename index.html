@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Favour Okoduwa — Software Development student die doordachte webinterfaces en applicaties bouwt.">
+  <meta name="theme-color" content="#09090b">
+  <title>Favour Okoduwa // dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="LiquidLens/packages/core/tokens.css">
+  <link rel="stylesheet" href="LiquidLens/packages/core/liquid-glass.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="liquid-wallpaper" aria-hidden="true"></div>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+  <div class="dot-grid" aria-hidden="true"></div>
+  <div class="orb orb-lime" aria-hidden="true"></div>
+  <div class="orb orb-pink" aria-hidden="true"></div>
+  <div class="orb orb-blue" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="loader" id="loader" aria-hidden="true"><span id="loader-text">0%</span></div>
+
+  <nav class="floating-nav lg-glass" data-glass aria-label="Hoofdnavigatie">
+    <a href="#home">home</a><a href="#about">over mij</a><a href="#skills">vaardigheden</a>
+    <a href="#projects">projecten</a><a href="#contact">contact</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="hero neo-section" id="home">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="window terminal-window lg-glass" data-glass>
+        <div class="window-header"><span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span><span>terminal.exe</span></div>
+        <div class="window-body" id="terminal">
+          <div id="term-history"><span class="lime">favour@dev</span>:~ $ echo "hallo wereld"<br><span class="white">hallo wereld</span><br><span class="blue">&gt; typ 'help' voor commando's.</span><br></div>
+          <label class="term-line"><span class="lime">favour@dev</span>:~ $ <input id="term-input" autocomplete="off" spellcheck="false" aria-label="Portfolio terminalcommando"></label>
+        </div>
+      </div>
+      <div class="window status-window lg-glass" data-glass>
+        <div class="window-header"><span class="window-dot red"></span><span class="window-dot yellow"></span><span class="window-dot green"></span><span>portfolio_status.js</span></div>
+        <div class="window-body"><span class="pink">const</span> status = {<br>&nbsp;&nbsp;focus: <span class="lime">"webontwikkeling"</span>,<br>&nbsp;&nbsp;mindset: <span class="blue">"altijd blijven leren"</span>,<br>&nbsp;&nbsp;koffie: <span class="pink">"onmisbaar"</span><br>};</div>
+      </div>
+      <div class="hero-center">
+        <div class="availability"><i></i> status: klaar om te leren</div>
+        <h1>FAVOUR<br><span>OKODUWA</span></h1>
+        <p>software development student die moderne interfaces en waardevolle digitale ervaringen bouwt.</p>
+        <div class="hero-actions"><a class="btn btn-lime" href="#projects">ontdek mijn werk ↓</a><a class="btn btn-dark" href="assets/cv.pdf" download>download cv ↓</a></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Technologieën">HTML & CSS <b>✳</b> JAVASCRIPT <b>✳</b> REACT <b>✳</b> PHP <b>✳</b> MYSQL <b>✳</b> ALTIJD BLIJVEN LEREN <b>✳</b></div>
+
+    <section class="content-section" id="about">
+      <h2><em>✳</em> over mij.</h2>
+      <div class="about-grid">
+        <article class="neo-card pink-card about-card lg-glass" data-glass><span class="card-file">over_mij.txt</span><h3>nieuwsgierig van aard.<br><strong>developer in de praktijk.</strong></h3><p>Ik ben Favour, een Software Development student die vaardigheden ontwikkelt door projecten te bouwen, problemen op te lossen en te leren hoe ideeën werkelijkheid worden in digitale ervaringen.</p><div class="pills"><span>probleemoplossend</span><span>continu leren</span><span>teamwork</span></div></article>
+        <div class="principles"><div><strong>01</strong><span>bouwen met een doel</span></div><div><strong>02</strong><span>leren door te doen</span></div><div><strong>03</strong><span>blijven verbeteren</span></div></div>
+      </div>
+    </section>
+
+    <section class="content-section" id="skills">
+      <h2><em class="lime-text">✳</em> vaardigheden.</h2>
+      <article class="neo-card lime-card skill-card lg-glass" data-glass><h3>tools waarmee ik werk</h3><div class="skill-groups"><div><b class="pink-text">frontend</b><div class="pills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div></div><div><b class="lime-text">backend & data</b><div class="pills"><span>PHP</span><span>Laravel</span><span>MySQL</span></div></div><div><b class="blue-text">workflow</b><div class="pills"><span>Responsief design</span><span>Git</span><span>UI-ontwerp</span></div></div></div></article>
+    </section>
+
+    <section class="content-section projects-section" id="projects">
+      <div class="build-backdrop" aria-hidden="true">
+        <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+          <source src="assets/movieflix-trailer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="build-overlay" aria-hidden="true"></div>
+      <h2><em class="pink-text">✳</em> projecten.</h2>
+      <div class="build-grid">
+        <article class="neo-card pink-card build-card featured-build lg-glass" data-glass><div class="build-top"><span>project_01.sh</span><span class="tag">uitgelicht</span></div><div class="build-image"><img src="assets/movieflix-preview.png" alt="Movieflix.nl streaming website voorbeeld"><div>Movieflix.nl voorbeeld</div></div><h3>film streaming website</h3><p>Een filmstreaming-websiteproject gericht op browsen, presentatie en responsief interface-design.</p><div class="pills"><span>HTML/CSS</span><span>JavaScript</span><span>UI design</span></div></article>
+        <article class="neo-card blue-card build-card lg-glass" data-glass><div class="build-top"><span>project_02.sh</span><span>mockup</span></div><div class="todo-preview"><div class="todo-side">✳<br><br>▦ overzicht<br>✓ mijn taken<br>◷ planning</div><div><small>MAANDAG, 09:41</small><h4>Goedemorgen, Favour ✦</h4><p>Dit is je focus voor vandaag.</p><hr>✓ Responsieve layout bouwen<br><span>○ Data koppelen aan API</span><br>○ Mobiele navigatie testen</div></div><h3>to-do applicatie</h3><p>Een productiviteits-app concept gericht op taakbeheer, statusupdates en het koppelen van een frontend aan backend data.</p><div class="pills"><span>React</span><span>PHP</span><span>MySQL</span></div></article>
+      </div>
+      <p class="disclaimer">&gt; film-preview is aangeleverd beeldmateriaal. to-do preview is ter illustratie. geverifieerde demo- en repositorylinks worden toegevoegd zodra ze beschikbaar zijn.</p>
+    </section>
+
+    <section class="content-section contact-section" id="contact">
+      <h2><em class="blue-text">✳</em> contact.</h2>
+      <article class="neo-card dark-card contact-card lg-glass" data-glass><p>heb je een project, kans of idee om te bespreken?</p><h3>laten we iets waardevols<br><span>bouwen.</span></h3><a class="btn btn-lime" href="mailto:fa.okoduwa@student.alfa-college.nl">neem contact op ↗</a></article>
+    </section>
+  </main>
+  <footer><span>FAVOUR.DEV</span><small>ontworpen &amp; gebouwd met nieuwsgierigheid · © <b id="year"></b></small><a href="#home">terug naar boven ↑</a></footer>
+  <script src="script.js"></script>
+  <script src="LiquidLens/packages/core/liquid-glass.js"></script>
+  <script>LiquidGlass.init({ refraction: 20, bezel: 24, blur: 2, saturation: 1.65, tintHue: 205, tintOpacity: 0.12 });</script>
+</body>
+</html>
